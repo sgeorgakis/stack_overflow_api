@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Statistics from StackOverflow</title>
+</head>
+<body>
+	<table border=1>
+	  <tr>
+		<th>Total number of accepted answers</th>
+		<th>Average score for all the accepted answers</th>
+		<th>Average answer count per question</th>
+	  </tr>
+	  <tr>
+		<td>{{ accepted_answers }}</td>
+		<td>{{ average_score }}</td>
+		<td>{{ average_answer_count }}</td>
+	  </tr>
+	</table>
+	</br>
+	</br>
+	<table border=1>
+	  <tr align="center">
+		<th>Comment Count for top 10 answers</th>
+	  </tr>
+	  <tr>
+		<th>Answer id</th>
+		<th>Comment count</th>
+	  </tr>
+	  {% for id, count in comments.items() %}
+	  <tr>
+		<td>{{ id }}</td>
+		<td>{{ count }}</td>
+	  </tr>
+	  {% endfor %}
+	</table>
+</body>
+</html>
